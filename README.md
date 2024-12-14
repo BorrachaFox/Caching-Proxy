@@ -58,14 +58,14 @@ caching-proxy --port <port_number> --origin <origin_url>
 - --origin <origin_url>: The URL of the origin server to which the requests will be forwarded (e.g., http://dummyjson.com).
 
 ## Command-Line Options
-- ```-p, --port <number>```: The port on which the caching proxy server will run.
-- ```-o, --origin <url>```: The URL of the origin server to which the requests will be forwarded.
+- ```-p, --port <port_number>```: The port on which the caching proxy server will run.
+- ```-o, --origin <origin_url>```: The URL of the origin server to which the requests will be forwarded.
 - ```-c, --clear-cache```: Clear the cached responses from the server.
 
 ### Example Command
 Start the proxy server and cache responses from the origin server:
 ```
-caching-proxy --port 3000 --origin [<origin_url>](http://dummyjson.com)
+caching-proxy --port 3000 --origin http://dummyjson.com
 ```
 Clear the cache:
 ```
