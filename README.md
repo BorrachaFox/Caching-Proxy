@@ -2,12 +2,19 @@
 
 A simple CLI tool that starts a caching proxy server. It forwards requests to the actual server and caches the responses. If the same request is made again, it will return the cached response instead of forwarding the request to the origin server, improving performance by reducing the number of requests sent to the origin server.
 
-PROJECT URL: https://roadmap.sh/projects/caching-server
+## Tech Used
+
+- **Docker**: Containerization of the caching proxy server and Redis for seamless deployment.
+- **Redis**: Used for caching responses from the origin server.
+- **Express**: Web framework for building the caching proxy server.
+- **TypeScript**: Superset of JavaScript for type safety and enhanced development experience.
 
 ## Features
 
-- **Caching**: Automatically caches responses from the origin server to reduce request load.
-- **Cache Headers**: Adds `X-Cache` header to indicate whether the response is from the cache (`HIT`) or from the origin server (`MISS`).
+- **Caching**: The server caches responses and returns them for subsequent identical requests.
+- **X-Cache Header**: The server adds an `X-Cache` header to responses:
+  - `X-Cache: HIT` when the response is served from the cache.
+  - `X-Cache: MISS` when the response is fetched from the origin server.
 - **Port and Origin Configuration**: Easily configurable via command-line arguments.
 - **Clear Cache**: Option to clear the cached responses from the server.
 
@@ -64,3 +71,6 @@ Clear the cache:
 ```
 caching-proxy --clear-cache
 ```
+
+## Extras
+This Repo serves as a solution to [Roadmap.sh Caching Server Problem](https://roadmap.sh/projects/caching-server)
