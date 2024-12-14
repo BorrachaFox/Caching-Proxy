@@ -8,12 +8,18 @@ const program = new Command();
 program
   .name("caching-proxy")
   .description("A CLI tool for running a caching proxy server")
-  .version("1.0.0");
+  .version("1.0.0", "-V, --version", "show the version number");
 
 program
-  .option("-p, --port <number>", "Port to run the proxy")
-  .option("-o, --origin <link>", "Website to be cached")
-  .option("-c, --clear-cache", "Clear cached data");
+  .option(
+    "-p, --port <port_number>",
+    "set the port number for the proxy to run on (default: 8080)"
+  )
+  .option("-o, --origin <origin_url>", "specify the website URL to be cached")
+  .option(
+    "-c, --clear-cache",
+    "clear the cached data for the specified website"
+  );
 
 program.parse();
 

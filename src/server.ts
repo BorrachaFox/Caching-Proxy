@@ -28,7 +28,7 @@ app.get("*", async (req, res) => {
 export async function startProxy(port: number, url: string) {
   base_url = url;
 
-  app.listen(port, () => {
+  app.listen(port || 8080, () => {
     console.log(`Proxy server started on port ${port} and caching ${url}`);
   });
 }
