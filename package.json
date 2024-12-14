@@ -2,8 +2,12 @@
   "name": "chaching_proxy",
   "version": "1.0.0",
   "main": "index.js",
+  "bin": {
+    "caching-proxy": "./dist/caching-proxy.js"
+  },
   "scripts": {
-    "dev": "nodemon"
+    "build": "tsc",
+    "start": "node dist/caching-proxy.js"
   },
   "keywords": [],
   "author": "",
