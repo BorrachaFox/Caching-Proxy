@@ -1,4 +1,4 @@
-# Caching Proxy | Roadmap.sh Projectlink
+# Caching Proxy | Roadmap.sh Project
 
 A simple CLI tool that starts a caching proxy server. It forwards requests to the actual server and caches the responses. If the same request is made again, it will return the cached response instead of forwarding the request to the origin server, improving performance by reducing the number of requests sent to the origin server.
 
